@@ -14,7 +14,7 @@ jobs:
 
       - name: Generate token
         id: generate_token
-        uses: getsentry/action-github-app-token@v1
+        uses: tibdex/github-app-token@v1.3
         with:
           app_id: ${{ secrets.SCALA_STEWARD_APP_ID }}
           private_key: ${{ secrets.SCALA_STEWARD_APP_PRIVATE_KEY }}
@@ -22,6 +22,6 @@ jobs:
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
         with:
-          github-token: ${{ steps.generate_token.output.token }}
+          github-token: ${{ steps.generate_token.outputs.token }}
           author-email: 5388508+xirc@users.noreply.github.com
           repos-file: repos.md
