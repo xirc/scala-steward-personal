@@ -8,13 +8,12 @@ jobs:
   scala-steward:
     name: Launch Scala Steward
     runs-on: ubuntu-latest
-    env:
-        root-directory: .
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
-        working-directory: ${{ env.root-directory }}
         with:
           github-token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
-          author-email: 12345+octocat@users.noreply.github.com
-          repos-file: 'repos.md'
+          author-email: 5388508+xirc@users.noreply.github.com
+          repos-file: repos.md
