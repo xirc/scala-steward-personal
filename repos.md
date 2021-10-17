@@ -3,3 +3,4 @@
 - xirc/example-akka-serialization-with-protobuf
 - xirc/scala-sandbox
 - xirc/akka-sandbox
+- xirc/skaffold-sbt-example
